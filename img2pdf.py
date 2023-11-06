@@ -1,17 +1,20 @@
 from PIL import Image
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+import os
 
 
-def img2pdf(imgs_path, output_name="output.pdf"):
+def img2pdf(imgs_path, output_name):
     """
     Integrate pictures into a pdf file.
     Args:
         imgs_path: A list of image paths.
         output_name: The name of the output pdf file.
     """
-
-    output_pdf = output_name  # 指定生成的PDF文件名
+    # 创建output文件夹
+    if not os.path.exists('output'):
+        os.mkdir('output')
+    output_pdf = os.path.join('output', output_name)
     c = canvas.Canvas(output_pdf, pagesize=letter)  # 打开一个PDF文件，并设置页面大小
 
     for image_file in imgs_path:
@@ -28,4 +31,4 @@ def img2pdf(imgs_path, output_name="output.pdf"):
     # 保存生成的PDF文件
     c.save()
 
-    print(f"PDF文件 '{output_pdf}' 已创建成功。")
+    print(f"PDF文件 '{output_pdf}' 已在output文件夹中创建成功")
