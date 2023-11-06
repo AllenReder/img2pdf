@@ -11,18 +11,20 @@ You can use this tool to generate a PDF file directly from several image files, 
 
 ---
 
-# How to use?
+## How to use?
 
-Easy to do:
+### Easy to do:
 ```bash
-python main.py [images path]
+python main.py
 ```
-like:
-```bash
-python main.py /user/img1.png /user/img2.png /user/img3.png
-```
+This will use such as `File Explorer (Windows)` or `Finder (MacOS)` to choose images.
 
-# Import package
+## Use Args :
+`-f, --files`: Several images path, must be image like `*.png`,`*.jpg`,`*.jpeg`,`*.gif`,`*.bmp`
+
+`-n, --name`: The name of output file. No matter you use `sample` or `sample.pdf`, it will be `sample.pdf`.
+
+### Use Package
 ```python
 from img2pdf import img2pdf
 
@@ -35,8 +37,8 @@ img2pdf(imgs_path, output_name="output.pdf")
 
 ## Now
 
-- 更新以命令行参数的方式选择图片
-- 更新基于系统提供的接口方式选择文件管理器/Finder中的图片
+- ~~更新以命令行参数的方式选择图片~~
+- ~~更新基于系统提供的接口方式通过文件管理器/Finder选择图片~~
 
 ## Maybe
 
