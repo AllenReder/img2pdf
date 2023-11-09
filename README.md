@@ -39,8 +39,8 @@ img2pdf(imgs_path, output_name="output.pdf")
 
 - [x] 更新以命令行参数的方式选择图片
 - [x] 更新基于系统提供的接口方式通过文件管理器/Finder选择图片
+- [x] 打包exe运行文件(Windows)
 
 ## Maybe
 
 - [ ] 可选的pdf页面大小格式
-- [ ] 打包exe运行文件(Windows)
